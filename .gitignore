@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Model checkpoints -- too big for git. Share via scp or NERSC scratch.
+*.pt
+*.pth
+
+# Datasets
+asl_alphabet_*/
+*.zip
+data/
+ourhands/
+
+# Profiler traces can be hundreds of MB
+**/trace.json
+
+# KEEP these: they are the results
+# logs/*.log
+# out-*/history.json
+# figures/
