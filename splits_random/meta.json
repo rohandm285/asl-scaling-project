@@ -1,0 +1,214 @@
+{
+  "data_root": "/pscratch/sd/p/pvg17/asl/asl_alphabet_train/asl_alphabet_train",
+  "classes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "del",
+    "nothing",
+    "space"
+  ],
+  "class_to_idx": {
+    "A": 0,
+    "B": 1,
+    "C": 2,
+    "D": 3,
+    "E": 4,
+    "F": 5,
+    "G": 6,
+    "H": 7,
+    "I": 8,
+    "J": 9,
+    "K": 10,
+    "L": 11,
+    "M": 12,
+    "N": 13,
+    "O": 14,
+    "P": 15,
+    "Q": 16,
+    "R": 17,
+    "S": 18,
+    "T": 19,
+    "U": 20,
+    "V": 21,
+    "W": 22,
+    "X": 23,
+    "Y": 24,
+    "Z": 25,
+    "del": 26,
+    "nothing": 27,
+    "space": 28
+  },
+  "num_classes": 29,
+  "split_mode": "random",
+  "per_class_counts": {
+    "A": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "B": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "C": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "D": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "E": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "F": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "G": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "H": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "I": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "J": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "K": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "L": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "M": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "N": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "O": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "P": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "Q": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "R": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "S": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "T": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "U": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "V": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "W": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "X": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "Y": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "Z": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "del": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "nothing": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    },
+    "space": {
+      "train": 2400,
+      "val": 300,
+      "test": 300
+    }
+  }
+}
