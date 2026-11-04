@@ -7,7 +7,8 @@
 #          --export=ALL,MODEL=mobilenet_v2,NGPU=4,PER_GPU_BATCH=64,EPOCHS=20,TAG=strong \
 #          slurm/run_training.sh
 #
-# Use slurm/submit_sweep.sh to fire off the whole sweep at once.
+# slurm/submit_sweep.sh uses this. TAG only names the output folder and log; it is
+# not passed to train_asl.py as --tag.
 
 #SBATCH --qos=regular
 #SBATCH --constraint=gpu

@@ -12,14 +12,14 @@ everything else:
 Three ways to run it:
 
   # 1. the test split from a splits dir
-  python eval_asl.py --ckpt out-1gpu/best.pt --splits_dir splits_block \\
+  python eval_asl.py --ckpt out-baseline-mobilenet_v2/best.pt --splits_dir splits_block \\
       --split test --data_root $SCRATCH/asl/asl_alphabet_train/asl_alphabet_train
 
   # 2. a loose folder of images, one subfolder per class (our own hands)
-  python eval_asl.py --ckpt out-1gpu/best.pt --image_dir ourhands
+  python eval_asl.py --ckpt out-baseline-mobilenet_v2/best.pt --image_dir ourhands
 
   # 3. the block-vs-random split comparison, the headline leakage result
-  python eval_asl.py --ckpt out-1gpu/best.pt --splits_dir splits_random \\
+  python eval_asl.py --ckpt out-baseline-mobilenet_v2/best.pt --splits_dir splits_random \\
       --split test --data_root ... --tag random
 """
 

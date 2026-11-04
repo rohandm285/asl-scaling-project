@@ -1,5 +1,11 @@
 #!/bin/bash
-# Submit the whole scaling sweep as batch jobs, then walk away.
+# Submit 20-epoch training runs across GPU counts, then walk away.
+#
+# This is NOT the planned sweep. For that, use slurm/week10.sh (baselines, weak)
+# and slurm/week11_13.sh (profile, strong, batch), whose training runs use fp32
+# and --tag. These runs use bf16 and no --tag, so plot_results.py files them under
+# weak or strong: keep them out of the --runs_dir you use for the planned sweep.
+# The reason to run this is time-to-target across GPU counts, which timed runs lack.
 #
 #   bash slurm/submit_sweep.sh strong     # fixed global batch of 256
 #   bash slurm/submit_sweep.sh weak       # fixed per-GPU batch of 128

@@ -15,8 +15,10 @@ adjacent in time stay on the same side of the split, which removes most of the
 leakage. We report both splits so you can show the difference in the report.
 
 Usage:
-    python prepare_data.py --data_root $SCRATCH/asl/asl_alphabet_train \
-                           --out_dir   $SCRATCH/asl/splits
+    python prepare_data.py --data_root $SCRATCH/asl/asl_alphabet_train/asl_alphabet_train \
+                           --out_dir splits_block --seed 0
+    python prepare_data.py --data_root $SCRATCH/asl/asl_alphabet_train/asl_alphabet_train \
+                           --out_dir splits_random --mode random --seed 0
 """
 
 import argparse

@@ -1,8 +1,8 @@
 #!/bin/bash
 # Week 10 deliverables, exactly as the midterm deck specifies them.
 #
-#   bash slurm/week10.sh baselines   # single-GPU baselines, both models, fp32
-#   bash slurm/week10.sh weak        # weak-scaling sweep, 1 -> 16 GPUs
+#   bash slurm/week10.sh baselines   # Vincent: single-GPU baselines, both models, fp32
+#   bash slurm/week10.sh weak        # Rohan: weak-scaling sweep, 1 -> 16 GPUs
 #   bash slurm/week10.sh all
 #
 # Deck spec this follows:

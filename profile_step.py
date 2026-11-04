@@ -8,9 +8,12 @@ Philip's section is built around.
 
 Launch it exactly like train_asl.py, at each GPU count you care about:
 
-    srun -n 4 --cpus-per-task 16 --gpus-per-node 4 ./run_ddp.sh profile_step.py \\
+    srun -n 4 --cpus-per-task 32 --gpus-per-node 4 ./run_ddp.sh profile_step.py \\
         --splits_dir splits_block --data_root "$SCRATCH/asl/..." \\
-        --model mobilenet_v2 --batch_size 64 --out_dir prof-4gpu
+        --model mobilenet_v2 --batch_size 256 --workers 8 --precision fp32 \\
+        --out_dir prof-cpu-mobilenet_v2-4gpu
+
+`bash slurm/week11_13.sh profile` submits these for both models at 1 and 4 GPUs.
 
 It writes:
   <out_dir>/breakdown.json    the three-way split, for plotting

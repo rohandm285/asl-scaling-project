@@ -6,7 +6,10 @@ breakdown.json and writes:
 
   fig_time_breakdown.png     stacked bar per GPU count: compute / comms / data
   fig_data_wait.png          share of each step spent waiting on the loader
-  fig_pipeline_fix.png       before and after --gpu_resident, if both exist
+  fig_pipeline_fix.png       before and after the fix, if both exist. Needs a
+                             prof-*gpures* folder; profile_step.py has no
+                             --gpu_resident, so the normal runs skip this. Compare
+                             RESULT_TIMED throughput from train_asl.py instead.
   profile_summary.csv        one row per profiled configuration
 
     python plot_profile.py --runs_dir . --out_dir figures

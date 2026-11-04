@@ -14,11 +14,11 @@ not for tens of thousands of tiny ones, so the per-file overhead dominates.
 
 THE FIX
 -------
-The whole training set is about 10 GB as raw 8-bit pixels at the dataset's
+The whole training set is about 8.4 GB as raw 8-bit pixels at the dataset's
 native 200x200, which fits in a 40 GB A100 alongside the model. So:
 
   1. Decode every image ONCE at startup, into a uint8 tensor on the GPU.
-  2. Each rank holds only its own shard, so with 4 GPUs each stores ~2.6 GB.
+  2. Each rank holds only its own shard, so with 4 GPUs each stores ~2.1 GB.
   3. Every batch after that is a GPU-side index into that tensor. No file
      reads, no JPEG decoding, no host-to-device copies during training.
   4. Augmentation runs on the GPU as batched tensor ops.
