@@ -1,0 +1,26 @@
+model mobilenet_v2: 2.26M parameters, gradient size 9.0 MB in fp32
+world_size 8 | per-GPU batch 256 | global batch 2048
+optimizer adamw | input pipeline CPU DataLoader
+lr 1.000e-03 (scale_lr=False) | 33 steps/epoch | 660 total steps
+train 69600 | val 8700 | classes 29
+warmup: 50 steps
+  warmup 25/50
+  warmup 50/50
+/pscratch/sd/r/rohanm/perlmutter-class/dist_dl/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+timing: 300 steps
+  step 100/300  7644.1 img/s
+  step 200/300  7993.2 img/s
+  step 300/300  8135.8 img/s
+
+======================================================================
+model            mobilenet_v2
+GPUs             8
+per-GPU batch    256
+global batch     2048
+THROUGHPUT       8135.7 img/s
+median step      183.29 ms (p90 225.35 ms)
+peak GPU memory  20.25 GB
+GPU utilization  79.5% mean, 100% median (150 samples)
+======================================================================
+RESULT_TIMED model=mobilenet_v2 world_size=8 per_gpu_batch=256 global_batch=2048 throughput_img_s=8135.7 median_step_ms=183.29 peak_mem_GB=20.25 gpu_util_pct=79.5

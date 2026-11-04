@@ -1,0 +1,24 @@
+model resnet18: 11.19M parameters, gradient size 44.8 MB in fp32
+world_size 1 | per-GPU batch 256 | global batch 256
+optimizer adamw | input pipeline CPU DataLoader
+lr 1.000e-03 (scale_lr=False) | 271 steps/epoch | 5420 total steps
+train 69600 | val 8700 | classes 29
+warmup: 50 steps
+  warmup 25/50
+  warmup 50/50
+timing: 300 steps
+  step 100/300  946.4 img/s
+  step 200/300  1054.8 img/s
+  step 300/300  1086.1 img/s
+
+======================================================================
+model            resnet18
+GPUs             1
+per-GPU batch    256
+global batch     256
+THROUGHPUT       1086.1 img/s
+median step      94.06 ms (p90 748.90 ms)
+peak GPU memory  5.96 GB
+GPU utilization  40.0% mean, 29% median (140 samples)
+======================================================================
+RESULT_TIMED model=resnet18 world_size=1 per_gpu_batch=256 global_batch=256 throughput_img_s=1086.1 median_step_ms=94.06 peak_mem_GB=5.96 gpu_util_pct=40.0

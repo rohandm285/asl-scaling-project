@@ -1,0 +1,26 @@
+model resnet18: 11.19M parameters, gradient size 44.8 MB in fp32
+world_size 16 | per-GPU batch 256 | global batch 4096
+optimizer adamw | input pipeline CPU DataLoader
+lr 1.000e-03 (scale_lr=False) | 16 steps/epoch | 320 total steps
+train 69600 | val 8700 | classes 29
+warmup: 50 steps
+  warmup 25/50
+  warmup 50/50
+/pscratch/sd/r/rohanm/perlmutter-class/dist_dl/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+timing: 300 steps
+  step 100/300  16325.9 img/s
+  step 200/300  16203.3 img/s
+  step 300/300  16298.0 img/s
+
+======================================================================
+model            resnet18
+GPUs             16
+per-GPU batch    256
+global batch     4096
+THROUGHPUT       16297.9 img/s
+median step      104.85 ms (p90 474.71 ms)
+peak GPU memory  6.00 GB
+GPU utilization  63.5% mean, 100% median (149 samples)
+======================================================================
+RESULT_TIMED model=resnet18 world_size=16 per_gpu_batch=256 global_batch=4096 throughput_img_s=16297.9 median_step_ms=104.85 peak_mem_GB=6.00 gpu_util_pct=63.5

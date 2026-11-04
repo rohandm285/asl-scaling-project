@@ -1,0 +1,24 @@
+model mobilenet_v2: 2.26M parameters, gradient size 9.0 MB in fp32
+world_size 1 | per-GPU batch 256 | global batch 256
+optimizer adamw | input pipeline CPU DataLoader
+lr 1.000e-03 (scale_lr=False) | 271 steps/epoch | 5420 total steps
+train 69600 | val 8700 | classes 29
+warmup: 50 steps
+  warmup 25/50
+  warmup 50/50
+timing: 300 steps
+  step 100/300  1167.6 img/s
+  step 200/300  1167.1 img/s
+  step 300/300  1178.3 img/s
+
+======================================================================
+model            mobilenet_v2
+GPUs             1
+per-GPU batch    256
+global batch     256
+THROUGHPUT       1178.3 img/s
+median step      178.19 ms (p90 330.96 ms)
+peak GPU memory  20.24 GB
+GPU utilization  83.2% mean, 100% median (129 samples)
+======================================================================
+RESULT_TIMED model=mobilenet_v2 world_size=1 per_gpu_batch=256 global_batch=256 throughput_img_s=1178.3 median_step_ms=178.19 peak_mem_GB=20.24 gpu_util_pct=83.2

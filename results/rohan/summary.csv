@@ -1,0 +1,11 @@
+model,mode,gpus,per_gpu_batch,global_batch,lr,median_img_s,speedup,efficiency_pct,best_val_acc,time_to_target_s,total_time_s,epochs,dir
+mobilenet_v2,weak,1,256,256,0.001,1168.2,1.0,100.0,0,-1,0,20,./out-weakexcl-mobilenet_v2-1gpu
+mobilenet_v2,weak,2,256,512,0.001,2319.9,1.986,99.3,0,-1,0,20,./out-weakexcl-mobilenet_v2-2gpu
+mobilenet_v2,weak,4,256,1024,0.001,4231.0,3.622,90.5,0,-1,0,20,./out-weak-mobilenet_v2-4gpu
+mobilenet_v2,weak,8,256,2048,0.001,8135.7,6.965,87.1,0,-1,0,20,./out-weak-mobilenet_v2-8gpu
+mobilenet_v2,weak,16,256,4096,0.001,13805.9,11.819,73.9,0,-1,0,20,./out-weak-mobilenet_v2-16gpu
+resnet18,weak,1,256,256,0.001,1183.6,1.0,100.0,0,-1,0,20,./out-weakexcl-resnet18-1gpu
+resnet18,weak,2,256,512,0.001,2320.2,1.96,98.0,0,-1,0,20,./out-weakexcl-resnet18-2gpu
+resnet18,weak,4,256,1024,0.001,4398.8,3.716,92.9,0,-1,0,20,./out-weak-resnet18-4gpu
+resnet18,weak,8,256,2048,0.001,8802.3,7.437,93.0,0,-1,0,20,./out-weak-resnet18-8gpu
+resnet18,weak,16,256,4096,0.001,16297.9,13.769,86.1,0,-1,0,20,./out-weak-resnet18-16gpu
