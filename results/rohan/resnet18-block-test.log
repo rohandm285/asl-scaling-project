@@ -1,0 +1,29 @@
+
+=== resnet18_block ===
+model      : resnet18
+source     : splits_block:test
+images     : 8700
+ACCURACY   : 97.79%
+mean confidence  correct  86.3%  wrong  47.5%
+
+worst classes:
+         Y   80.0%
+         X   85.7%
+         V   89.0%
+         N   93.7%
+         M   95.0%
+       del   95.3%
+         E   99.3%
+         W   99.3%
+
+top confusions (true -> predicted, count):
+         Y -> I        60
+         X -> L        35
+         V -> K        33
+         N -> M        19
+         M -> N        15
+       del -> C        14
+         X -> K        5
+         E -> B        2
+
+wrote eval/eval_resnet18_block.json and confusion_resnet18_block.(npy|png)
